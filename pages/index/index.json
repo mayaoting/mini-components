@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "stopwatch": "../../components/stopwatch/stopwatch",
+    "bottomdrawer": "../../components/bottomdrawer/bottomdrawer"
+  }
+}

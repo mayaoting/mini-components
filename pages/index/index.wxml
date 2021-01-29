@@ -1,0 +1,11 @@
+<!-- index.wxml -->
+<view class="container">
+  <view catch:tap="openShadow">向上弹出</view>
+</view>
+<!-- 弹框 -->
+<bottomdrawer id="bottomdrawer">
+  <view>秒表计时器</view>
+  <stopwatch id="stopwatch" class="stopwatch"></stopwatch>
+  <button class="btn" wx:if="{{!started}}" bindtap="start">开始计时</button>
+  <button class="btn" wx:if="{{started}}" bindtap="stop">结束计时</button>
+</bottomdrawer>

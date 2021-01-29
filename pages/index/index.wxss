@@ -1,0 +1,45 @@
+/**index.wxss**/
+page {
+  background-color: #f9f9f9;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40rpx;
+}
+
+.mask {
+  position: fixed;
+  z-index: 990;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.box {
+  position: fixed;
+  z-index: 1100;
+  width: auto;
+  right: 0;
+  left: 0;
+  bottom: -100%;
+  padding: 40rpx 30rpx 0rpx;
+  background-color: #ffffff;
+}
+
+.stopwatch {
+  font-family: monospace;
+  font-size: 32px;
+  text-align: center;
+  display: block;
+  margin: 60rpx;
+}
+
+.btn {
+  margin: 60rpx;
+}

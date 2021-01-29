@@ -1,0 +1,4 @@
+<view class="mask" wx:if="{{shadowFlag}}" catchtap="close"></view>
+<view class="box" wx:if="{{shadowFlag}}">
+  <slot></slot>
+</view>
