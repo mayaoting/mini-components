@@ -1,0 +1,57 @@
+.section{
+    width: 100%;
+    height: 100vh;
+}
+.movable-area,.clip-box {
+    width: 600rpx;
+    height: 350rpx;
+}
+.movable-area.active, .clip-box.active {
+    width: 600rpx;
+    height: 600rpx;
+}
+.image {
+  width: 400%;
+  height: 400%;
+  transform: translate3d(0, 0, 0) scale(0.25, 0.25);
+  transform-origin: left top;
+}
+
+.bottom-btns {
+  position: fixed;
+  bottom: 0;
+  width: 750rpx;
+  display: flex;
+  justify-content: space-between;
+  background: #202020;
+  color: #ffffff;
+  height: 60px;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.bottom-btns .complete{
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 20px;
+    background: #08e92d;
+}
+/* 把 canvas 定位到屏幕之外 */
+.canvas {
+  position: fixed;
+  left: 100%;
+  top: 100%;
+}
+.clip-box .item{
+    position: fixed;
+    background: rgba(0,0,0,0.85);
+}
+.clip-box{
+    box-sizing: border-box;
+    position: absolute;
+    border: 2px solid #08e92d;
+    pointer-events: none;
+}

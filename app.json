@@ -1,13 +1,19 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/tabbar/index",
+    "pages/nav/index",
+    "pages/drawer/index",
+    "pages/date/index",
+    "pages/imgcove/index",
+    "pages/canvas/index",
+    "pages/canvas/cutimage/index"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black"
+    "navigationBarTitleText": "mini-components",
+    "navigationBarTextStyle": "black"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

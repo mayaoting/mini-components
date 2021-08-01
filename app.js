@@ -7,9 +7,8 @@
  * @FilePath: \little-project\app.js
  */
 // app.js
-const globalData = require('utils/globalData.js')
 App({
-  onLaunch() {
+  onLaunch () {
     // 展示本地存储能力
     const logs = wx.getStorageSync('logs') || []
     // unshift() 往数组的开头添加一个或更多元素，并返回新的长度
@@ -43,5 +42,7 @@ App({
       }
     })
   },
-  globalData: globalData
+  globalData: {
+    userInfo: null
+  }
 })

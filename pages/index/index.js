@@ -1,64 +1,46 @@
-/*
- * @Author: your name
- * @Date: 2021-01-28 16:23:25
- * @LastEditTime: 2021-01-29 15:35:04
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: \little-project\pages\index\index.js
- */
-// index.js
-// 获取应用实例
+//index.js
+//获取应用实例
+import { jumpTo } from '../../utils/util'
 const app = getApp()
 
 Page({
   data: {
-    shadowFlag: false,
-    started: false
+    weanText: [
+      {
+        textData: [
+          {
+            name: '滑动导航栏',
+            url: '/pages/tabbar/index'
+          },
+          {
+            name: '滚动导航条',
+            url: '/pages/nav/index'
+          },
+          {
+            name: '抽屉',
+            url: '/pages/drawer/index'
+          },
+          {
+            name: '时间日期选择器',
+            url: '/pages/date/index'
+          },
+          {
+            name: '图片裁剪',
+            url: '/pages/canvas/index'
+          },
+          {
+            name: '向上弹出',
+            url: '/pages/bottom-draw/index'
+          }
+        ]
+      },
+    ]
   },
-  onLoad() {
+  onLoad: function () {
 
   },
-  // shadow() {
-  //   console.log('showShadow')
-  //   this.setData({
-  //     shadowFlag: true
-  //   })
-  //   this.animate('.mask', [{
-  //       opacity: 0,
-  //       backgroundColor: "#000"
-  //     },
-  //     {
-  //       opacity: 0.6,
-  //       backgroundColor: "#000"
-  //     }
-  //   ], 300, function () {}.bind(this))
-
-  //   this.animate('.box', [{
-  //       bottom: '-100%'
-  //     },
-  //     {
-  //       bottom: 0
-  //     }
-  //   ], 300, function () {}.bind(this))
-  // },
-  // close() {
-  //   this.setData({
-  //     shadowFlag: false
-  //   })
-  // },
-  openShadow() {
-    this.selectComponent('#bottomdrawer').shadow()
-  },
-  start() {
-    this.setData({
-      started: true
-    })
-    this.selectComponent('#stopwatch').start()
-  },
-  stop() {
-    this.setData({
-      started: false
-    })
-    this.selectComponent('#stopwatch').stop()
+  toUrl (e) {
+    let { url } = e.target.dataset.item
+    jumpTo(url)
   }
 })
